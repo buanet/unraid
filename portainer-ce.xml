@@ -10,7 +10,7 @@
   <DonateText/>
   <DonateLink/>
   <Registry>https://hub.docker.com/r/portainer/portainer</Registry>
-  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/main/img/portainer_logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer_logo.png</Icon>
   <WebUI>http://[iP]:[PORT:9000]</WebUI>
   <ExtraParams/>
   <PostArgs/>
