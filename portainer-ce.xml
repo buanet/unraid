@@ -2,11 +2,7 @@
 <Container version="2">
   <Name>portainer</Name>
   <TemplateURL/>
-  <Overview>Portaine Community Edition is an open source tool for managing container based applications across Kubernetes, Docker, Docker Swarm and Azure ACI environments.
-    Portainer's intuitive interface, removes the complexity traditionally associated with managing container platforms.
-    It gives users the simplicity they want without forcing them to compromise on functionality.
-    It is used by developers, devops and infrastructure teams all over the world to simplify processes and streamline their operations.
-  </Overview>
+  <Overview>Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write code.</Overview>
   <Repository>portainer/portainer-ce</Repository>
   <Category/>
   <Support>https://smarthome.buanet.de</Support>
