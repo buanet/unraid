@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>iobroker</Name>
+  <TemplateURL/>
+  <Overview>This is still BETA!</Overview>
+  <Repository>buanet/iobroker</Repository>
+  <Category/>
+  <Support>https://smarthome.buanet.de</Support>
+  <Project>https://www.iobroker.net</Project>
+  <DonateText/>
+  <DonateLink/>
+  <Registry>https://hub.docker.com/r/buanet/iobroker</Registry>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer_logo.png</Icon>
+  <WebUI>http://[iP]:[PORT:8081]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/iobroker_data</HostDir>
+      <ContainerDir>/opt/iobroker</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+
+  <Config Name="Web interface port" Target="8081" Default="" Mode="tcp" Description="This is the ioBroker default web interface port." Type="Port" Display="always-hide" Required="true" Mask="false">9000</Config>
+  <Config Name="Path to config folder" Target="/opt/iobroker" Default="" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/docker/portainer_data</Config>
+</Container>
