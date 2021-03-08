@@ -3,14 +3,14 @@
   <Name>iobroker</Name>
   <TemplateURL/>
   <Overview>This is still BETA!</Overview>
-  <Repository>buanet/iobroker</Repository>
+  <Repository>buanet/iobroker:latest</Repository>
   <Category/>
   <Support>https://smarthome.buanet.de</Support>
   <Project>https://www.iobroker.net</Project>
   <DonateText/>
   <DonateLink/>
   <Registry>https://hub.docker.com/r/buanet/iobroker</Registry>
-  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer_logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/iobroker.png</Icon>
   <WebUI>http://[iP]:[PORT:8081]</WebUI>
   <ExtraParams/>
   <PostArgs/>
