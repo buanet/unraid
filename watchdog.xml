@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>watchdog</Name>
+  <TemplateURL/>
+  <Overview>This is still BETA!</Overview>
+  <Repository>buanet/watchdog:latest</Repository>
+  <Category/>
+  <Support>https://smarthome.buanet.de</Support>
+  <Project>https://www.iobroker.net</Project>
+  <DonateText/>
+  <DonateLink/>
+  <Registry>https://hub.docker.com/r/buanet/watchdog</Registry>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer_logo.png</Icon>
+  <WebUI>http://[iP]:[PORT:8081]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment/>
+  <Labels/>
+</Container>
