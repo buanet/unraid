@@ -40,6 +40,6 @@
   <Environment/>
   <Labels/>
 
-  <Config Name="Web interface port" Target="8081" Default="" Mode="tcp" Description="This is the ioBroker default web interface port." Type="Port" Display="always-hide" Required="true" Mask="false">9000</Config>
-  <Config Name="Path to config folder" Target="/opt/iobroker" Default="" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/docker/portainer_data</Config>
+  <Config Name="Web interface port" Target="8081" Default="" Mode="tcp" Description="This is the ioBroker default web interface port." Type="Port" Display="always-hide" Required="true" Mask="false">8081</Config>
+  <Config Name="Path to config folder" Target="/opt/iobroker" Default="" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/docker/iobroker_data</Config>
 </Container>
