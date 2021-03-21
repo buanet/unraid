@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>portainer_agent</Name>
+  <TemplateURL/>
+  <Overview>Portainer is the definitive open source container management tool for Kubernetes, Docker, Docker Swarm and Azure ACI. It allows anyone to deploy and manage containers without the need to write code.</Overview>
+  <Repository>portainer/agent</Repository>
+  <Category/>
+  <Support>https://smarthome.buanet.de</Support>
+  <Project>https://portainer.io</Project>
+  <DonateText/>
+  <DonateLink/>
+  <Registry>https://hub.docker.com/r/portainer/portainer</Registry>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer.png</Icon>
+  <WebUI>http://[iP]:[PORT:9001]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/var/lib/docker/volumes</HostDir>
+      <ContainerDir>/var/lib/docker/volumes</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+
+  <Config Name="Portainer Agent Port" Target="9001" Default="" Mode="tcp" Description="This is port Portainer connects to the agent." Type="Port" Display="always-hide" Required="true" Mask="false">9000</Config>
+  <Config Name="Path to Docker volumes" Target="/var/lib/docker/volumes" Default="" Mode="rw" Description="This is where Portainter stores it's volumes." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/docker/portainer_data</Config>
+  <Config Name="Path to Docker socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="This is where Portainer connects to Docker daemon." Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>
