@@ -11,7 +11,7 @@
   <DonateLink/>
   <Registry>https://hub.docker.com/r/portainer/portainer</Registry>
   <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/portainer.png</Icon>
-  <WebUI>http://[iP]:[PORT:9001]</WebUI>
+  <WebUI></WebUI>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -24,7 +24,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>9001</HostPort>
+        <HostPort>8889</HostPort>
         <ContainerPort>9001</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -45,7 +45,7 @@
   <Environment/>
   <Labels/>
 
-  <Config Name="Portainer Agent Port" Target="9001" Default="" Mode="tcp" Description="This is port Portainer connects to the agent." Type="Port" Display="always-hide" Required="true" Mask="false">9000</Config>
-  <Config Name="Path to Docker volumes" Target="/var/lib/docker/volumes" Default="" Mode="rw" Description="This is where Portainter stores it's volumes." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/docker/portainer_data</Config>
+  <Config Name="Portainer Agent Port" Target="9001" Default="" Mode="tcp" Description="This is port Portainer connects to the agent." Type="Port" Display="always-hide" Required="true" Mask="false">8889</Config>
+  <Config Name="Path to Docker volumes" Target="/var/lib/docker/volumes" Default="" Mode="rw" Description="This is where Portainter stores it's volumes." Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/lib/docker/volumes</Config>
   <Config Name="Path to Docker socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="This is where Portainer connects to Docker daemon." Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
 </Container>
