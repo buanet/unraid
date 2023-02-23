@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>iobroker</Name>
-  <TemplateURL/>
-  <Overview>This is still BETA!</Overview>
   <Repository>buanet/iobroker:latest</Repository>
-  <Category/>
-  <Support>https://smarthome.buanet.de</Support>
-  <Project>https://www.iobroker.net</Project>
-  <DonateText/>
-  <DonateLink/>
   <Registry>https://hub.docker.com/r/buanet/iobroker</Registry>
+  <TemplateURL>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/iobroker.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/iobroker.png</Icon>
+  <Overview>IoBroker is a open source IoT platform written in JavaScript that easily connects smarthome components from different manufactures. With the help of plugins (called: "adapters") ioBroker is able to communicate with a big variety of IoT hardware and services using different protocols and APIs.<br>All data is stored in a central database that all adapters can access. With this it is very easy to build up logical connections, automation scripts and beautiful visualizations.</Overview>
+  <Category>HomeAutomation</Category>
+  <Support>https://forum.iobroker.net</Support>
+  <Project>https://www.iobroker.net</Project>
+  <DonateText>If you like my wor, feel free to buy me a pizza ;)<DonateText>
+  <DonateLink>https://paypal.me/buanet</DonateLink>
+  <Registry>https://hub.docker.com/r/buanet/iobroker</Registry>
   <WebUI>http://[iP]:[PORT:8081]</WebUI>
-  <ExtraParams/>
+  <ExtraParams>--hostname iobroker</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <Network>bridge</Network>
   <MyIP/>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
-
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -32,14 +32,39 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/docker/iobroker_data</HostDir>
+      <HostDir>/mnt/user/appdata/iobroker/data</HostDir>
       <ContainerDir>/opt/iobroker</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iobroker/userscripts</HostDir>
+      <ContainerDir>/opt/userscripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>SETUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>SETGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USBDEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>DEBUG</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
-
   <Config Name="Web interface port" Target="8081" Default="" Mode="tcp" Description="This is the ioBroker default web interface port." Type="Port" Display="always-hide" Required="true" Mask="false">8081</Config>
-  <Config Name="Path to config folder" Target="/opt/iobroker" Default="" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/docker/iobroker_data</Config>
+  <Config Name="Path to config folder" Target="/opt/iobroker" Default="" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/iobroker/data</Config>
 </Container>

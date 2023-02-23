@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/buanet.jpg</Icon>
+  <Profile>
+    Mainterner of the official ioBroker Docker Container and "smarthome with docker" enthusiast.
+  </Profile>
+  <DonateLink>https://paypal.me/buanet</DonateLink>
+  <DonateText>If you like my work, feel free to buy me a pizza.</DonateText>
+  <Forum>https://github.com/buanet/ioBroker.docker/discussions</Forum>
+  <WebPage>https://docs.buanet.de</WebPage>
+  <Reddit>https://www.reddit.com/user/buanet</Reddit>
+  <Discord>https://discord.gg/HwUCwsH</Discord>
+  <Twitter>https://twitter.com/buanetde</Twitter>
+</Maintainer>
