@@ -1,28 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>watchdog</Name>
-  <TemplateURL/>
-  <Overview>This is still BETA!</Overview>
+  <Name>Docker Watchdog</Name>
   <Repository>buanet/watchdog:latest</Repository>
-  <Category/>
-  <Support>https://smarthome.buanet.de</Support>
-  <Project>https://www.iobroker.net</Project>
-  <DonateText/>
-  <DonateLink/>
   <Registry>https://hub.docker.com/r/buanet/watchdog</Registry>
-  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/watchdog.png</Icon>
-  <WebUI>http://[iP]:[PORT:8081]</WebUI>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
+  <Network>none</Network>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
-
-  <Networking>
-    <Mode>bridge</Mode>
-  </Networking>
-  <Environment/>
-  <Labels/>
+  <Support/>
+  <Project>https://github.com/buanet/docker.watchdog</Project>
+  <Overview>Watchdog for Docker is a Docker image which provides (at the moment) just a simple watchdog to automatically restart unhealthy containers. Some more functions to monitor your containers will follow.</Overview>
+  <Beta>False</Beta>
+  <Category>Tools:</Category>
+  <Date>2023-02-24</Date>
+  <TemplateURL>https://raw.githubusercontent.com/buanet/unraid-docker-templates/main/watchdog.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/main/img/watchdog.png</Icon>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Path to docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Watchdog Label" Target="WATCHDOG_CONTAINER_LABEL" Default="all" Mode="" Description="Defines a label name the watchdog is looking for." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
 </Container>
