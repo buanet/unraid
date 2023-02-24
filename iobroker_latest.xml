@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>iobroker</Name>
+  <Repository>buanet/iobroker:latest</Repository>
+  <Registry>https://hub.docker.com/r/buanet/iobroker</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101016-support-buanet-iobroker/</Support>
+  <Project>https://www.iobroker.net</Project>
+  <Overview>IoBroker is an open source IoT platform written in JavaScript that easily connects smarthome components from different manufactures. With the help of plugins (called: "adapters") ioBroker is able to communicate with a big variety of IoT hardware and services using different protocols and APIs.&#xD;
+All data is stored in a central database that all adapters can access. With this it is very easy to build up logical connections, automation scripts and beautiful visualizations.</Overview>
+  <Beta>False</Beta>
+  <Category>HomeAutomation:</Category>
+  <Date>2023-02-24</Date>
+  <Screenshot>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/iob_admin_screenshot.png</Screenshot>
+  <WebUI>http://[iP]:[PORT:8081]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/iobroker_latest.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/buanet/unraid-docker-templates/master/img/iobroker.png</Icon>
+  <ExtraParams>--hostname iobroker</ExtraParams>
+  <Requires>Think about using Host or Custom (MACVLAN) network. Some adapters require some Broad- or Multicast features, which are not available in when working with bridge network. Alongsinde with this, keep in mind, that adapters you install to your ioBroker may require opening up additional ports on your ioBroker Docker Container to work properly.</Requires>
+  <Config Name="Data Directory" Target="/opt/iobroker" Default="/mnt/user/appdata/iobroker/data" Mode="rw" Description="This is where ioBroker stores it's data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/iobroker/data</Config>
+  <Config Name="Userscripts Directory" Target="/opt/userscripts" Default="/mnt/user/appdata/iobroker/userscripts" Mode="rw" Description="This is where user defined startup scripts can be stored." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/iobroker/userscripts</Config>
+  <Config Name="Packages" Target="PACKAGES" Default="" Mode="" Description="Installs additional linux packages to your container, packages should be seperated by whitespace like this: package1 package2 package3." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="USB Devices" Target="USBDEVICES" Default="" Mode="" Description="Sets permissions for iobroker on mounted usb devices." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="WebUI Port" Target="8081" Default="8081" Mode="tcp" Description="The ioBroker web interface port." Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="UID" Target="SETUID" Default="99" Mode="" Description="Sets UID to prevent permission issues." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="SETGID" Default="100" Mode="" Description="Sets GID to prevent permission issues." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Debug Log" Target="DEBUG" Default="false" Mode="" Description="Change to enable advanced debug output." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
